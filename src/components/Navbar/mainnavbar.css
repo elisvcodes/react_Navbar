@@ -1,0 +1,60 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.logo {
+    margin:2rem;
+    font-size: 3rem;
+}
+
+.toggle {
+    font-size: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 0.5rem;
+}
+.menu{
+    display: none;
+}
+
+.menu.active{
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.menu_items {
+    padding: 0.5rem 0;
+}
+
+@media screen and (min-width:1024px) {
+    .header {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+.logo {
+    width: 30%;
+}
+    .menu{
+        display: flex;
+        font-size: 3rem;
+        width: 70%;
+        justify-content: right;
+    }
+    .menu_items {
+        padding: 0 2rem;
+    }
+    .menu_items:last-child{
+        padding-right: 5rem;
+    }
+    .toggle {
+        display: none;
+    }
+}
